@@ -2,15 +2,7 @@ const fs = require('fs');
 const qr = require('qrcode');
 const vCard = require('vcards-js');
 
-const contact = {
-    firstName: 'John',
-    lastName: 'Doe',
-    organization: 'Acme Inc.',
-    title: 'CEO',
-    email: 'john.doe@example.com',
-    workPhone: '123-456-7890',
-    workAddress: 'Acme Inc.\n123 Main St\nSuite 101\nAnytown, USA 12345'
-};
+const contact = require('./contact.json');
 
 const card = vCard();
 
