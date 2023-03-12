@@ -15,10 +15,17 @@ if (!url) {
 const filename = slugify(url) + '.png';
 
 // Génère le QR code correspondant à l'URL
-qr.toFile(filename, url, (err) => {
+qr.toFile(filename, url, {
+    color: {
+        dark: '#000000FF',  // couleur de premier plan : noir opaque
+        light: '#00000000'  // couleur d'arrière-plan : transparent
+    },
+    errorCorrectionLevel: 'H'
+}, (err) => {
     if (err) {
         console.error(err);
         process.exit(1);
     }
     console.log(`Le fichier ${filename} a été créé.`);
 });
+

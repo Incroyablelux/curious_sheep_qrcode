@@ -17,6 +17,10 @@ card.workAddress.label = contact.workAddress;
 const vcardString = card.getFormattedString();
 
 qr.toFile(`${contact.firstName}_${contact.lastName}.png`, vcardString, {
+    color: {
+        dark: '#000000FF',  // couleur de premier plan : noir opaque
+        light: '#00000000'  // couleur d'arrière-plan : transparent
+    },
     errorCorrectionLevel: 'H'
 }, (err) => {
     if (err) {
