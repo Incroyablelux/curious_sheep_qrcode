@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "qrcode": "^1.5.1",
+    "slugify": "^1.6.5"
+  }
+}
